@@ -1,5 +1,14 @@
 # OTE Template
 
+[![Validate](https://github.com/your-user/your-repo/actions/workflows/validate.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/validate.yml)
+[![Publish](https://github.com/your-user/your-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/publish.yml)
+[![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fyour-user.github.io%2Fyour-repo%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
+
+Replace `your-user/your-repo` in the three badge URLs above with your fork
+(and the Pages URL in the third one) once you've finished the setup below —
+until then they point at nothing and render broken, which is your reminder
+to come back and fix them.
+
 Fork this repository and get, with nothing but GitHub and GitHub Pages:
 
 - Your community's **[OTE](https://opentechevents.org) event feed** published at a public URL.

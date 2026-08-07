@@ -12,6 +12,23 @@ update in: `git pull upstream main` (see the README's *Updates* section).
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+**This version number is unrelated to the OTE spec's own `specVersion`**
+(currently `0.3.0`, tracked in
+[opentechevents-spec](https://github.com/OpenTechEvents/opentechevents-spec)).
+They're two independent axes that happen to share small numbers right now —
+this file versions the template repo (dashboard, workflows, docs), the spec
+versions the data format. A template release never implies a schema bump, or
+the other way around.
+
+## [0.4.0] - 2026-08-07
+
+### Added
+- README badges: `Validate` and `Publish` workflow status, and a dynamic
+  `OTE spec` badge that reads the `specVersion` straight from your published
+  `feed.json` (via shields.io) instead of a hardcoded number that could drift
+  from what the workflows actually validate against. All three need
+  `your-user/your-repo` replaced with your fork.
+
 ## [0.3.0] - 2026-08-07
 
 ### Removed
