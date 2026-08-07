@@ -1,9 +1,8 @@
 # Eventos de Community Builders
 
-[![OTE: publica un feed](https://opentechevents.org/badge/ote-feed.svg)](https://opentechevents.org)
+[![feed OTE](https://opentechevents.org/badge/ote-feed.es.svg)](https://combuilderses.github.io/events/feed.json)
 [![Validate](https://github.com/ComBuildersES/events/actions/workflows/validate.yml/badge.svg)](https://github.com/ComBuildersES/events/actions/workflows/validate.yml)
 [![Publish](https://github.com/ComBuildersES/events/actions/workflows/publish.yml/badge.svg)](https://github.com/ComBuildersES/events/actions/workflows/publish.yml)
-[![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcombuilderses.github.io%2Fevents%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
 
 Calendario público de **[Community Builders](https://combuilderses.github.io/)**:
 encuentros entre las personas que dinamizan comunidades técnicas — meetups,

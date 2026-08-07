@@ -16,5 +16,7 @@ field reference: [opentechevents.org/spec](https://opentechevents.org/spec/).
 
 Keep at least one file here (this one is enough) even before you've added
 your first event. Git doesn't track empty directories, and this folder
-disappearing entirely currently breaks the build — see
-[ote-tools#23](https://github.com/OpenTechEvents/ote-tools/issues/23).
+disappearing entirely used to break the build — fixed upstream in
+[ote-tools#23](https://github.com/OpenTechEvents/ote-tools/issues/23), but
+keeping a placeholder here is still good practice if your fork ever pins to
+an older `ote-tools` ref.

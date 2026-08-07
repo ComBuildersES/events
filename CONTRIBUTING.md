@@ -20,7 +20,7 @@ El mismo enlace está en el
 ## 2. Avisar de un error
 
 ¿Fecha equivocada, enlace roto, cambio de sitio, evento cancelado?
-**[Abre una issue](https://github.com/ComBuildersES/events/issues/new/choose)**
+**[Abre una issue](../../issues/new/choose)**
 contando qué falla. Las correcciones pequeñas son bienvenidas y se aplican en
 un momento — no te calles una por parecerte menor.
 
