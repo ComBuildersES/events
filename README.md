@@ -1,13 +1,8 @@
 # OTE Template
 
-<!--
-Uncomment these once you've finished the setup below, replacing
-your-user/your-repo with your fork (and the Pages URL in the third one):
-
-[![Validate](https://github.com/your-user/your-repo/actions/workflows/validate.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/validate.yml)
-[![Publish](https://github.com/your-user/your-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/publish.yml)
-[![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fyour-user.github.io%2Fyour-repo%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
--->
+[![Validate](https://github.com/ComBuildersES/events/actions/workflows/validate.yml/badge.svg)](https://github.com/ComBuildersES/events/actions/workflows/validate.yml)
+[![Publish](https://github.com/ComBuildersES/events/actions/workflows/publish.yml/badge.svg)](https://github.com/ComBuildersES/events/actions/workflows/publish.yml)
+[![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcombuilderses.github.io%2Fevents%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
 
 Fork this repository and get, with nothing but GitHub and GitHub Pages:
 
@@ -65,7 +60,7 @@ website"**.
 a `docs/config.js` with one line:
 
 ```js
-window.OTE_REPO = "your-user/your-repo";
+window.OTE_REPO = "ComBuildersES/events";
 ```
 
 ### 4. Enable issues (optional, recommended)
@@ -144,7 +139,8 @@ directories and users can find your feed.
 ### 9. Turn on the README badges (optional)
 
 Near the top of this file, uncomment the `Validate`/`Publish`/`OTE spec`
-badges and replace `your-user/your-repo` with your fork.
+badges and point them at your fork. ✅ Done — they point at
+`ComBuildersES/events`.
 
 ## Editing events
 
@@ -154,9 +150,8 @@ from your dashboard (create/edit events via a form, proposed as a PR to your
 repo) is coming in phase 2.
 
 **Propose an event without touching JSON**: anyone can fill in the
-[OTE editor](https://tools.opentechevents.org/editor?repo=your-user/your-repo)
-(replace `your-user/your-repo` with your fork, or just follow the link from
-your dashboard). It generates the event JSON and opens a prefilled issue in
+[OTE editor](https://tools.opentechevents.org/editor?repo=ComBuildersES/events)
+(or just follow the link from your dashboard). It generates the event JSON and opens a prefilled issue in
 your repo; a workflow validates it and turns it into a pull request for you
 to review and merge. No git, no JSON editing, no write access needed.
 
