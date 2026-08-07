@@ -12,9 +12,8 @@ No lock-in: the ICS/RSS exports mean you can leave anytime and take everything w
 ## What's in this repo
 
 ```
-├── events/*.json          ← your events (one file per event; the samples model
-│                             a GDG chapter running monthly meetups plus its
-│                             annual conference, DevFest)
+├── events/*.json          ← your events (one file per event — starts empty,
+│                             see events/README.md)
 ├── ote.config.json        ← your configuration (feed title, description…)
 ├── docs/index.html        ← static dashboard (links to central tools)
 └── .github/workflows/     ← thin workflows calling reusable workflows
@@ -93,11 +92,11 @@ the point of a feed). If you want attribution, use
 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Any SPDX
 identifier or URL is accepted.
 
-### 6. Replace the sample events
+### 6. Add your events
 
-Delete the files in [events/](events/) and add your own — one JSON file per
-event. Use the samples as a starting point; the full field reference is at
-[opentechevents.org/spec](https://opentechevents.org/spec/). Minimal event:
+Add one JSON file per event to [events/](events/) — the full field reference
+is at [opentechevents.org/spec](https://opentechevents.org/spec/). Minimal
+event:
 
 ```json
 {
@@ -110,9 +109,9 @@ event. Use the samples as a starting point; the full field reference is at
 }
 ```
 
-File names are free-form — any `*.json` under `events/` is picked up. The
-samples use `YYYY-MM-name.json` so files sort chronologically, but nothing
-depends on it: an event's identity is its `id` field, not its file name.
+File names are free-form — any `*.json` under `events/` is picked up. Naming
+them `YYYY-MM-name.json` makes them sort chronologically, but nothing depends
+on it: an event's identity is its `id` field, not its file name.
 
 Every push validates your events and, if valid, rebuilds and redeploys your
 site: dashboard + `feed.json` + `feed.ics` + `feed.xml` at
@@ -160,5 +159,6 @@ git pull upstream main
 
 ## License
 
-Sample events and configuration: [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+Template files (this README, `ote.config.json`'s placeholders):
+[CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 Your own data: whatever `license` you declare in `ote.config.json` and your events.

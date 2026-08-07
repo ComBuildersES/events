@@ -12,6 +12,25 @@ update in: `git pull upstream main` (see the README's *Updates* section).
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-08-07
+
+### Removed
+- The bundled GDG Sample City example events. `events/` ships empty again,
+  with an `events/README.md` explaining the format and pointing to the spec
+  reference.
+
+### Changed
+- `README.md`: "Replace the sample events" → "Add your events"; the license
+  section no longer claims sample event data.
+
+### Fixed
+- `events/README.md` keeps the directory tracked by Git even with zero real
+  events. An `events/` directory with no files at all isn't tracked by Git,
+  and `ote-build-feed` currently treats a missing directory as a fatal error
+  rather than zero events — see
+  [ote-tools#23](https://github.com/OpenTechEvents/ote-tools/issues/23) for
+  the upstream fix. Keeping this file in place sidesteps it either way.
+
 ## [0.2.0] - 2026-08-07
 
 Sample data upgraded to OTE schema [v0.3.0](https://github.com/OpenTechEvents/opentechevents-spec/blob/main/CHANGELOG.md).
