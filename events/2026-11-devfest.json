@@ -1,0 +1,78 @@
+{
+  "specVersion": "0.3.0",
+  "id": "https://gdgsamplecity.example/devfest/2026",
+  "url": "https://gdgsamplecity.example/devfest/2026",
+  "name": "DevFest Sample City 2026",
+  "description": "Our annual community conference. Two days, three tracks, all levels welcome.",
+  "image": ["https://gdgsamplecity.example/img/2026-devfest-16x9.png"],
+  "organizers": [
+    { "name": "GDG Sample City", "url": "https://gdgsamplecity.example", "email": "hello@gdgsamplecity.example" }
+  ],
+  "startDate": "2026-11-13",
+  "endDate": "2026-11-14",
+  "timezone": "Europe/Madrid",
+  "attendanceMode": "in-person",
+  "location": {
+    "venue": "Palacio de Congresos, Valencia",
+    "address": {
+      "street": "Avenida de Ejemplo 60",
+      "locality": "Valencia",
+      "postalCode": "46015",
+      "country": "ES"
+    }
+  },
+  "languages": ["en"],
+  "tags": ["cloud", "ai", "android", "web"],
+
+  "_comment_offers": "Early bird sold out before its own deadline — `availability` is the live state, `closesAt` is just the advertised cutoff, and the two don't have to line up. The free student tier is also sold out, but with a `waitlistUrl`: a consumer that doesn't understand the field still reads the true 'sold out', while one that does can offer the waitlist.",
+
+  "offers": [
+    {
+      "name": "Early bird",
+      "price": 30,
+      "currency": "EUR",
+      "url": "https://gdgsamplecity.example/devfest/2026/tickets",
+      "availability": "sold-out",
+      "closesAt": "2026-07-15T23:59:59+02:00"
+    },
+    {
+      "name": "General",
+      "price": 45,
+      "currency": "EUR",
+      "url": "https://gdgsamplecity.example/devfest/2026/tickets",
+      "availability": "in-stock",
+      "opensAt": "2026-07-16T00:00:00+02:00"
+    },
+    {
+      "name": "Student",
+      "price": 0,
+      "url": "https://gdgsamplecity.example/devfest/2026/tickets#student",
+      "availability": "sold-out",
+      "waitlistUrl": "https://gdgsamplecity.example/devfest/2026/waitlist"
+    }
+  ],
+  "cfp": {
+    "url": "https://gdgsamplecity.example/devfest/2026/cfp",
+    "opensAt": "2026-06-01T00:00:00+02:00",
+    "closesAt": "2026-09-15T23:59:59+02:00",
+    "coversTravel": true,
+    "coversAccommodation": true
+  },
+  "status": "scheduled",
+  "license": "CC0-1.0",
+  "updatedAt": "2026-08-01T09:00:00Z",
+
+  "_comment_partOf": "DevFest Sample City happens every year; this document is the 2026 occurrence. `partOf` points at the series so a consumer can group past and future editions without the feed encoding a recurrence rule.",
+
+  "partOf": {
+    "id": "https://gdgsamplecity.example/devfest",
+    "name": "DevFest Sample City",
+    "url": "https://gdgsamplecity.example/devfest"
+  },
+  "translations": {
+    "es": {
+      "name": "DevFest Sample City 2026",
+      "description": "Nuestra conferencia anual de comunidad. Dos días, tres tracks, para todos los niveles."
+    }
+  }
+}

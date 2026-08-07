@@ -12,7 +12,9 @@ No lock-in: the ICS/RSS exports mean you can leave anytime and take everything w
 ## What's in this repo
 
 ```
-├── events/*.json          ← your events (one file per event)
+├── events/*.json          ← your events (one file per event; the samples model
+│                             a GDG chapter running monthly meetups plus its
+│                             annual conference, DevFest)
 ├── ote.config.json        ← your configuration (feed title, description…)
 ├── docs/index.html        ← static dashboard (links to central tools)
 └── .github/workflows/     ← thin workflows calling reusable workflows
@@ -99,10 +101,10 @@ event. Use the samples as a starting point; the full field reference is at
 
 ```json
 {
-  "specVersion": "0.2.0",
+  "specVersion": "0.3.0",
   "id": "https://your-community.example/events/2026-09-meetup",
   "name": "September meetup",
-  "startDate": "2026-09-24T19:00:00",
+  "startDate": "2026-09-24T19:00",
   "timezone": "Europe/Madrid",
   "license": "CC0-1.0"
 }

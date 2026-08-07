@@ -3,13 +3,19 @@
 
   "_comment_feed": "Metadata for your published feed (feed.json, ICS, RSS). Edit these three values after forking.",
   "_comment_license": "License of your event DATA (not of the events themselves). Recommended: CC0-1.0 (public domain, most permissive — anyone can republish, default) or CC-BY-4.0 (requires attribution). Any SPDX identifier or URL works.",
+  "_comment_organizers": "Who organizes your events, by default. Every event in events/*.json inherits this list unless it declares its own (which then REPLACES it, not merges — see the co-organized workshop example). Optional, but a feed without it can't be attributed by consumers.",
+  "_comment_textLanguage": "The language your feed's free text (title, description, and your events' name/description) is written in. Declared once here so events don't have to repeat it — only needed if you use `translations`.",
   "feed": {
-    "title": "Sample Tech Community Events",
-    "description": "Talks, workshops and meetups organised by Sample Tech Community.",
-    "url": "https://sample-community.example",
-    "license": "CC0-1.0"
+    "title": "GDG Sample City Events",
+    "description": "Monthly meetups and DevFest Sample City, organised by GDG Sample City.",
+    "url": "https://gdgsamplecity.example",
+    "license": "CC0-1.0",
+    "textLanguage": "en",
+    "organizers": [
+      { "name": "GDG Sample City", "url": "https://gdgsamplecity.example", "email": "hello@gdgsamplecity.example" }
+    ]
   },
 
-  "_comment_profile": "Which fields the central editor shows. Presets: 'meetup' (no CFP/sponsor fields) | 'conference' | 'all'. Used from phase 2 onwards; harmless until then.",
-  "profile": "meetup"
+  "_comment_profile": "Which fields the central editor shows. Presets: 'meetup' (no CFP/sponsor fields) | 'conference' | 'all'. Used from phase 2 onwards; harmless until then. The sample events mix a monthly meetup with an annual conference (DevFest), so this template defaults to 'all'.",
+  "profile": "all"
 }

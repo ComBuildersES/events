@@ -1,20 +1,47 @@
 {
-  "specVersion": "0.2.0",
-  "id": "https://sample-community.example/events/2026-09-monthly-meetup",
-  "url": "https://sample-community.example/events/2026-09-monthly-meetup",
-  "name": "Sample Community — September meetup",
+  "specVersion": "0.3.0",
+  "id": "https://gdgsamplecity.example/events/2026-09-meetup",
+  "url": "https://gdgsamplecity.example/events/2026-09-meetup",
+  "name": "GDG Sample City — September Meetup",
   "description": "Two talks and networking.\n\n18:30 Doors · 19:00 Talks · 20:30 Networking",
-  "startDate": "2026-09-24T19:00:00",
-  "endDate": "2026-09-24T21:00:00",
+  "image": [
+    {
+      "url": "https://gdgsamplecity.example/img/2026-09-16x9.png",
+      "alt": "Meetup poster on a blue background with the GDG Sample City logo and the date, 24 September, 19:00"
+    }
+  ],
+  "organizers": [
+    { "name": "GDG Sample City", "url": "https://gdgsamplecity.example", "email": "hello@gdgsamplecity.example" }
+  ],
+  "startDate": "2026-09-24T19:00",
+  "endDate": "2026-09-24T21:00",
   "timezone": "Europe/Madrid",
   "attendanceMode": "hybrid",
   "location": {
     "venue": "The Hub, Calle Ejemplo 1, Madrid",
-    "onlineUrl": "https://meet.example/sample-community",
+    "address": {
+      "street": "Calle Ejemplo 1",
+      "locality": "Madrid",
+      "postalCode": "28001",
+      "country": "ES"
+    },
+    "onlineUrl": "https://meet.example/gdg-samplecity",
     "geo": { "lat": 40.4168, "lon": -3.7038 }
   },
-  "languages": ["es"],
-  "tags": ["web", "javascript"],
+  "languages": ["en"],
+  "tags": ["android", "cloud", "web"],
+  "offers": [
+    { "price": 0, "url": "https://gdgsamplecity.example/events/2026-09-meetup#rsvp" }
+  ],
   "status": "scheduled",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "updatedAt": "2026-08-01T09:00:00Z",
+
+  "_comment_partOf": "One occurrence of a monthly series, not the series itself — the feed carries one document per edition. `partOf` only says which set this belongs to; it doesn't generate future dates.",
+
+  "partOf": {
+    "id": "https://gdgsamplecity.example/events/monthly-meetup",
+    "name": "GDG Sample City — monthly meetup",
+    "url": "https://gdgsamplecity.example/events/monthly-meetup"
+  }
 }
