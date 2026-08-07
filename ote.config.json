@@ -8,10 +8,10 @@
     "textLanguage": "es",
     "organizers": [
       {
-        "type": "organization",
         "name": "Community Builders",
         "url": "https://combuilderses.github.io/",
-        "email": "communitybuilders.es@gmail.com"
+        "email": "communitybuilders.es@gmail.com",
+        "type": "organization"
       }
     ],
     "translations": {
@@ -21,5 +21,15 @@
       }
     }
   },
-  "profile": "meetup"
+  "customProfile": {
+    "fields": [
+      "description",
+      "tags",
+      "languages",
+      "status",
+      "attendanceMode",
+      "onlineUrl",
+      "organizers"
+    ]
+  }
 }
