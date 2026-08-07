@@ -1,21 +1,25 @@
 {
-  "_comment": "Your community's configuration. The central OTE tools (editor, publish, exports) read this file from your fork. Keys starting with '_' are comments — safe to delete.",
-
-  "_comment_feed": "Metadata for your published feed (feed.json, ICS, RSS). Replace every value below with your own — they're placeholders telling you what to type, not real defaults to leave in place.",
-  "_comment_license": "License of your event DATA (not of the events themselves). Recommended: CC0-1.0 (public domain, most permissive — anyone can republish, default) or CC-BY-4.0 (requires attribution). Any SPDX identifier or URL works.",
-  "_comment_textLanguage": "The language your feed's free text (title, description, and your events' name/description) is written in, as a BCP-47 tag ('es', 'ca', 'en'…). Declared once here so events don't have to repeat it. Optional — only needed if you use `translations`.",
-  "_comment_organizers": "Who organizes your events, by default. Every event in events/*.json inherits this list unless it declares its own (which then REPLACES it, not merges — see the co-organized workshop example). Optional, but a feed without it can't be attributed by consumers.",
   "feed": {
-    "title": "<Your community name> events",
-    "description": "Describe what type of events this feed includes — talks, meetups, workshops, conferences…",
-    "url": "https://your-community.example",
+    "title": "Community Builders Community Events",
+    "description": "Meetings held among members of the Community Builders community (people who help energize technical communities: meetups, conferences, collaborative groups, etc.)",
+    "url": "https://combuilderses.github.io/",
     "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "textLanguage": "en",
     "organizers": [
-      { "name": "<Your community name>", "url": "https://your-community.example" }
-    ]
+      {
+        "type": "organization",
+        "name": "Community Builders",
+        "url": "https://combuilderses.github.io/",
+        "email": "communitybuilders.es@gmail.com"
+      }
+    ],
+    "translations": {
+      "es": {
+        "title": "Eventos de la comunidad Community Builders",
+        "description": "Encuentros celebrados entre las personas que forman parte de Community Builders (personas que contribuyen a dinamizar las comunidades técnicas: encuentros, conferencias, grupos de colaboración, etc.)"
+      }
+    }
   },
-
-  "_comment_profile": "Which fields the central editor shows. Presets: 'meetup' (no CFP/sponsor fields) | 'conference' | 'all'. Used from phase 2 onwards; harmless until then. Use 'all' if, like the sample events, you run both regular meetups and occasional conferences.",
   "profile": "meetup"
 }
