@@ -20,6 +20,20 @@ this file versions the template repo (dashboard, workflows, docs), the spec
 versions the data format. A template release never implies a schema bump, or
 the other way around.
 
+## [0.5.0] - 2026-08-07
+
+### Removed
+- `DESIGN.md`: a pre-implementation proposal doc (Spanish, "nothing
+  implemented yet") that added nothing for an organizer and was already
+  stale even in its canonical home, `OpenTechEvents/ote-tools` — phase 2
+  (the central editor) is substantially built there already.
+- `CLAUDE.md` as a shipped file. The guardrails it held (don't add
+  validation/export/UI logic here, keep the repo simple, English is the
+  official language) now live as a copy-paste block under a new README
+  section, "Using an AI coding assistant on your fork" — tool-agnostic
+  (`CLAUDE.md`, `AGENTS.md`, Copilot instructions…) instead of committing
+  every fork to one assistant's file format.
+
 ## [0.4.1] - 2026-08-07
 
 ### Fixed

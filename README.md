@@ -166,6 +166,34 @@ then:
 git pull upstream main
 ```
 
+## Using an AI coding assistant on your fork
+
+If you use Claude Code, Codex, Copilot or similar to help manage your fork,
+paste this into whichever instructions file it reads (`CLAUDE.md`, `AGENTS.md`,
+`.github/copilot-instructions.md`…) — it keeps the assistant from "helpfully"
+adding logic that belongs in `ote-tools` instead of here:
+
+```
+This is a template repo that community organizers fork. It should contain
+ONLY: events/*.json (your data), ote.config.json (your configuration), docs/
+(a minimal static dashboard), and thin workflows that call reusable workflows
+in OpenTechEvents/ote-tools.
+
+It must NOT contain validation/export/UI logic — that lives in
+OpenTechEvents/ote-tools. If a task asks you to add logic here, that's a sign
+something is wrong: stop and ask before proceeding.
+
+The workflows reference OpenTechEvents/ote-tools/.github/workflows/*.yml@main
+(will pin to @v1 once stable).
+
+Keep this repo simple enough that an organizer can understand it in five
+minutes.
+
+Official language: English. All documentation, code comments, names,
+commit/PR messages, UI text and repo content are written in English, even if
+your own prompts are in another language.
+```
+
 ## License
 
 Template files (this README, `ote.config.json`'s placeholders):
