@@ -1,206 +1,41 @@
-# OTE Template
+# <Your community name>
 
 <!--
-Uncomment these once you've finished the setup below, replacing
-your-user/your-repo with your fork (and the Pages URL in the third one):
+Uncomment these once you've finished SETUP.md, replacing your-user/your-repo
+with your fork (and the Pages URL in the third one):
 
 [![Validate](https://github.com/your-user/your-repo/actions/workflows/validate.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/validate.yml)
 [![Publish](https://github.com/your-user/your-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/publish.yml)
 [![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fyour-user.github.io%2Fyour-repo%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
 -->
 
-Fork this repository and get, with nothing but GitHub and GitHub Pages:
+<!-- New fork? The one-time setup guide is in SETUP.md. -->
 
-- Your community's **[OTE](https://opentechevents.org) event feed** published at a public URL.
-- **iCalendar (`feed.ics`)** and **RSS (`feed.xml`)** exports, rebuilt automatically on every change.
-- A minimal **dashboard** linking to the central OTE tools (editor, import, publish).
+Describe what type of events this feed includes — talks, meetups, workshops,
+conferences…
 
-Your data stays in **your** repository, as plain JSON, under an open license.
-No lock-in: the ICS/RSS exports mean you can leave anytime and take everything with you.
+**👉 [See what's coming up](https://your-user.github.io/your-repo/)**
 
-## What's in this repo
+## Subscribe
 
-```
-├── events/*.json          ← your events (one file per event — starts empty,
-│                             see events/README.md)
-├── ote.config.json        ← your configuration (feed title, description…)
-├── docs/index.html        ← static dashboard (links to central tools)
-└── .github/workflows/     ← thin workflows calling reusable workflows
-                             in OpenTechEvents/ote-tools
-```
+| Format | URL | For |
+| --- | --- | --- |
+| iCalendar | [`feed.ics`](https://your-user.github.io/your-repo/feed.ics) | Add it to Google Calendar, Apple Calendar or Outlook — new events show up on their own |
+| RSS | [`feed.xml`](https://your-user.github.io/your-repo/feed.xml) | Follow it from any feed reader |
+| JSON | [`feed.json`](https://your-user.github.io/your-repo/feed.json) | Build something with it — the machine-readable [OTE](https://opentechevents.org/spec/) feed |
 
-That's all. Validation, exports and the editor UI live in
-[OpenTechEvents/ote-tools](https://github.com/OpenTechEvents/ote-tools) and are
-consumed via reusable workflows — improvements reach your fork without you
-touching anything.
+For the calendar formats, look for "subscribe by **URL**" (not "import
+file") and paste the `feed.ics` link — that way it stays in sync instead of
+freezing at import time.
 
-## Get started
+## Reuse the data
 
-### 1. Fork
+Event data in this repository is published under the license declared in
+[`ote.config.json`](ote.config.json). Building a directory, a newsletter or
+your own aggregator? Take what you need — republishing this feed is itself a
+form of supporting this community.
 
-Click **Fork** on this repository. Fork — not "Use this template" — so you can
-later pull upstream improvements to the dashboard and workflows:
+## Contributing
 
-```
-git remote add upstream https://github.com/OpenTechEvents/ote-template
-git pull upstream main
-```
-
-### 2. Enable workflows
-
-GitHub disables Actions on forks by default. In your fork, open the
-**Actions** tab and click **"I understand my workflows, go ahead and enable
-them"**. Without this, nothing gets validated or published.
-
-### 3. Enable GitHub Pages
-
-In your fork: **Settings → Pages → Source: GitHub Actions**.
-
-Once the first deploy finishes, link the site from your repo so visitors find
-it: repo home → **About** (gear icon) → check **"Use your GitHub Pages
-website"**.
-
-**Custom domain?** If your Pages are served from your own domain instead of
-`*.github.io`, the dashboard can't detect the repository from the URL. Create
-a `docs/config.js` with one line:
-
-```js
-window.OTE_REPO = "your-user/your-repo";
-```
-
-### 4. Enable issues (optional, recommended)
-
-GitHub disables Issues on forks by default. If you want the community to be
-able to report mistakes or propose events — and to use the OTE editor's
-"propose change" flow, which delivers changes as prefilled issues — enable
-them: **Settings → General → Features → Issues**.
-
-Then create the label the flow depends on — forks don't inherit labels, and
-GitHub silently ignores missing labels declared in issue forms, so without it
-proposed events never become pull requests. In your fork: **Issues → Labels →
-New label**, name it exactly `ote-event`. The propose-event issue form applies
-it, and the issue-to-pr workflow only reacts to issues carrying it.
-
-Finally, let Actions open the pull request: **Settings → Actions → General →
-Workflow permissions → check "Allow GitHub Actions to create and approve pull
-requests"**. Without this, a proposed event validates and its branch is pushed,
-but the workflow can't open the PR.
-
-This template ships a [CONTRIBUTING.md](CONTRIBUTING.md) that explains the
-contribution flow to visitors. Adapt it to your community, or delete it if
-you don't want contributions.
-
-### 5. Edit `ote.config.json`
-
-Set your feed's `title`, `description` and `url` (your community's website).
-
-The `license` applies to your event *data*, not to the events. The template
-defaults to [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-(public domain — most permissive, anyone can republish your events, which is
-the point of a feed). If you want attribution, use
-[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Any SPDX
-identifier or URL is accepted.
-
-### 6. Add your events
-
-Add one JSON file per event to [events/](events/) — the full field reference
-is at [opentechevents.org/spec](https://opentechevents.org/spec/). Minimal
-event:
-
-```json
-{
-  "specVersion": "0.3.0",
-  "id": "https://your-community.example/events/2026-09-meetup",
-  "name": "September meetup",
-  "startDate": "2026-09-24T19:00",
-  "timezone": "Europe/Madrid",
-  "license": "CC0-1.0"
-}
-```
-
-File names are free-form — any `*.json` under `events/` is picked up. Naming
-them `YYYY-MM-name.json` makes them sort chronologically, but nothing depends
-on it: an event's identity is its `id` field, not its file name.
-
-Every push validates your events and, if valid, rebuilds and redeploys your
-site: dashboard + `feed.json` + `feed.ics` + `feed.xml` at
-`https://<user>.github.io/<repo>/`. Deploys take a couple of minutes.
-
-### 7. Make your feed discoverable
-
-Add this to the `<head>` of your community's website (if you have one):
-
-```html
-<link rel="alternate" type="application/ote+json"
-      href="https://<user>.github.io/<repo>/feed.json">
-```
-
-### 8. Register as an adopter
-
-Add your community to the adopters list in
-[opentechevents-spec](https://github.com/OpenTechEvents/opentechevents-spec) so
-directories and users can find your feed.
-
-### 9. Turn on the README badges (optional)
-
-Near the top of this file, uncomment the `Validate`/`Publish`/`OTE spec`
-badges and replace `your-user/your-repo` with your fork.
-
-## Editing events
-
-Phase 1 is hand-edited JSON — the workflows validate every push and pull
-request, so mistakes can't reach your published feed. The **editor** linked
-from your dashboard (create/edit events via a form, proposed as a PR to your
-repo) is coming in phase 2.
-
-**Propose an event without touching JSON**: anyone can fill in the
-[OTE editor](https://tools.opentechevents.org/editor?repo=your-user/your-repo)
-(replace `your-user/your-repo` with your fork, or just follow the link from
-your dashboard). It generates the event JSON and opens a prefilled issue in
-your repo; a workflow validates it and turns it into a pull request for you
-to review and merge. No git, no JSON editing, no write access needed.
-
-## Updates
-
-The thin workflows track `OpenTechEvents/ote-tools@main` (pinned to `@v1` once
-stable), so validation and export improvements arrive automatically. For the
-few files that live here (dashboard, workflows), pull from upstream now and
-then:
-
-```
-git pull upstream main
-```
-
-## Using an AI coding assistant on your fork
-
-If you use Claude Code, Codex, Copilot or similar to help manage your fork,
-paste this into whichever instructions file it reads (`CLAUDE.md`, `AGENTS.md`,
-`.github/copilot-instructions.md`…) — it keeps the assistant from "helpfully"
-adding logic that belongs in `ote-tools` instead of here:
-
-```
-This is a template repo that community organizers fork. It should contain
-ONLY: events/*.json (your data), ote.config.json (your configuration), docs/
-(a minimal static dashboard), and thin workflows that call reusable workflows
-in OpenTechEvents/ote-tools.
-
-It must NOT contain validation/export/UI logic — that lives in
-OpenTechEvents/ote-tools. If a task asks you to add logic here, that's a sign
-something is wrong: stop and ask before proceeding.
-
-The workflows reference OpenTechEvents/ote-tools/.github/workflows/*.yml@main
-(will pin to @v1 once stable).
-
-Keep this repo simple enough that an organizer can understand it in five
-minutes.
-
-Official language: English. All documentation, code comments, names,
-commit/PR messages, UI text and repo content are written in English, even if
-your own prompts are in another language.
-```
-
-## License
-
-Template files (this README, `ote.config.json`'s placeholders):
-[CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-Your own data: whatever `license` you declare in `ote.config.json` and your events.
+Found a mistake, or want to add an event? See
+[CONTRIBUTING.md](CONTRIBUTING.md).

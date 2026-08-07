@@ -7,7 +7,8 @@ tracked here.
 
 This file, together with the [`VERSION`](VERSION) marker, is what the dashboard
 reads to tell you a newer template is available and what it changed. To pull an
-update in: `git pull upstream main` (see the README's *Updates* section).
+update in: `git pull upstream main` (see *Staying up to date* in `SETUP.md`,
+or below if you've already deleted it).
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -19,6 +20,53 @@ They're two independent axes that happen to share small numbers right now —
 this file versions the template repo (dashboard, workflows, docs), the spec
 versions the data format. A template release never implies a schema bump, or
 the other way around.
+
+## [0.6.0] - 2026-08-07
+
+Restructured around one principle: **every file has exactly one owner,
+upstream or the fork, never both.** Prompted by a real fork
+(`ComBuildersES/events`) that had to fully rewrite `README.md` and
+`CONTRIBUTING.md` to be usable, and shipped with a `textLanguage: "en"`
+default that didn't match its own content.
+
+### Added
+- `SETUP.md`: the one-time onboarding manual (enable Actions/Pages/Issues,
+  create the `ote-event` label, register as an adopter, turn on badges…),
+  upstream-owned. Read once, safe to delete. Absorbs the "Using an AI coding
+  assistant" block and the update-from-upstream recipe that used to live in
+  `README.md`.
+- `i18n/README.es.md` and `i18n/CONTRIBUTING.es.md`: optional Spanish
+  starting points for the two fork-owned files below, referenced from
+  `SETUP.md`.
+
+### Changed
+- `README.md` and `CONTRIBUTING.md` are now minimal, fork-owned skeletons
+  from the moment you fork — modeled on what `ComBuildersES/events`
+  independently rewrote them into. **Upstream commits to never editing
+  either file again in a future template release**, so `git pull upstream
+  main` has nothing left to conflict with on them.
+- `ote.config.json`: dropped the hardcoded `textLanguage: "en"` default —
+  the field is optional and "absent = unknown, never English" was already
+  the documented rule; shipping `"en"` anyway contradicted it. Also fixed
+  two comments that referenced the sample events removed in 0.3.0.
+- `events/README.md`: the `ote-tools#23` reference now reflects that it's
+  fixed upstream, not still open.
+
+### Evaluated, not done (tracked as `ote-tools` follow-ups)
+- Warning (not failing) validation when `feed.url`/`organizers[].url` still
+  ends in `.example`.
+- A `dashboard-checks.js` banner for disabled Issues or a missing
+  `ote-event` label.
+- A "configure your feed" mode in the `ote-tools` editor, writing
+  `ote.config.json` through the same propose-change/edit-directly pipeline
+  events already use — preferred over a self-committing `workflow_dispatch`
+  bootstrap in this repo, since the steps causing the most friction (enabling
+  Issues/Pages, allowing Actions to open PRs) are repo *Settings* that the
+  default `GITHUB_TOKEN` can't change regardless of mechanism.
+- A `.gitattributes` `merge=ours` driver: skipped as the primary fix, since
+  it requires `git config merge.ours.driver` set locally per clone and
+  doesn't travel with the repository — the file-ownership split above makes
+  it unnecessary rather than papering over it.
 
 ## [0.5.0] - 2026-08-07
 
