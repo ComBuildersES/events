@@ -1,3 +1,6 @@
 .playwright-mcp/
 .vscode/
 .DS_Store
+
+# Local AI assistant instructions — not shipped with the feed
+CLAUDE.md

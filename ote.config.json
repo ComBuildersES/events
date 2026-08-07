@@ -1,11 +1,11 @@
 {
   "feed": {
-    "title": "Community Builders Community Events",
-    "description": "Meetings held among members of the Community Builders community (people who help energize technical communities: meetups, conferences, collaborative groups, etc.)",
+    "title": "Eventos de la comunidad Community Builders",
+    "description": "Encuentros celebrados entre las personas que forman parte de Community Builders (personas que contribuyen a dinamizar las comunidades técnicas: encuentros, conferencias, grupos de colaboración, etc.)",
     "url": "https://combuilderses.github.io/",
     "license": "CC0-1.0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "textLanguage": "en",
+    "textLanguage": "es",
     "organizers": [
       {
         "type": "organization",
@@ -15,9 +15,9 @@
       }
     ],
     "translations": {
-      "es": {
-        "title": "Eventos de la comunidad Community Builders",
-        "description": "Encuentros celebrados entre las personas que forman parte de Community Builders (personas que contribuyen a dinamizar las comunidades técnicas: encuentros, conferencias, grupos de colaboración, etc.)"
+      "en": {
+        "title": "Community Builders community events",
+        "description": "Meetings held among members of the Community Builders community (people who help energize technical communities: meetups, conferences, collaborative groups, etc.)"
       }
     }
   },
