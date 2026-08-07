@@ -21,6 +21,21 @@ this file versions the template repo (dashboard, workflows, docs), the spec
 versions the data format. A template release never implies a schema bump, or
 the other way around.
 
+## [0.6.1] - 2026-08-07
+
+### Changed
+- Swapped the shields.io "OTE spec" badge for the official static `OTE feed`
+  SVG from
+  [opentechevents-spec/docs/badge](https://github.com/OpenTechEvents/opentechevents-spec/tree/main/docs/badge)
+  (`https://opentechevents.org/badge/ote-feed.svg`, `.es.svg` in the Spanish
+  starter). It's a proper "subscribe to my feed" button — hand-written,
+  served from `opentechevents.org` with no third-party service or
+  version-string query behind it — rather than a dynamic version-number
+  badge that needed shields.io up and a `feed.json` already published to
+  render. Updated the matching instructions in `README.md`, `i18n/README.es.md`
+  and `SETUP.md`: the badge now needs a link target (your own `feed.json`),
+  not a shields.io query to build.
+
 ## [0.6.0] - 2026-08-07
 
 Restructured around one principle: **every file has exactly one owner,

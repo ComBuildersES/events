@@ -102,7 +102,9 @@ so directories and users can find your feed.
 ## 10. Turn on the README badges (optional)
 
 Near the top of your new `README.md`, uncomment the `Validate`/`Publish`/
-`OTE spec` badges and replace `your-user/your-repo` with your fork.
+`OTE feed` badges: replace `your-user/your-repo` with your fork in the
+first two, and point the third at your own `feed.json` — it's a subscribe
+button, so it has to lead straight to your feed, not to a page about OTE.
 
 ## Using an AI coding assistant on your fork
 

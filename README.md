@@ -1,12 +1,14 @@
 # <Your community name>
 
 <!--
-Uncomment these once you've finished SETUP.md, replacing your-user/your-repo
-with your fork (and the Pages URL in the third one):
+Uncomment these once you've finished SETUP.md: replace your-user/your-repo
+with your fork in the first two, and point the third one at your own
+feed.json (it's a subscribe button, not a status indicator — it must lead
+straight to something that resolves):
 
 [![Validate](https://github.com/your-user/your-repo/actions/workflows/validate.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/validate.yml)
 [![Publish](https://github.com/your-user/your-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/publish.yml)
-[![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fyour-user.github.io%2Fyour-repo%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
+[![OTE feed](https://opentechevents.org/badge/ote-feed.svg)](https://your-user.github.io/your-repo/feed.json)
 -->
 
 <!-- New fork? The one-time setup guide is in SETUP.md. -->
