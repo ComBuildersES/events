@@ -1,13 +1,13 @@
 # OTE Template
 
+<!--
+Uncomment these once you've finished the setup below, replacing
+your-user/your-repo with your fork (and the Pages URL in the third one):
+
 [![Validate](https://github.com/your-user/your-repo/actions/workflows/validate.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/validate.yml)
 [![Publish](https://github.com/your-user/your-repo/actions/workflows/publish.yml/badge.svg)](https://github.com/your-user/your-repo/actions/workflows/publish.yml)
 [![OTE spec](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fyour-user.github.io%2Fyour-repo%2Ffeed.json&query=%24.specVersion&label=OTE%20spec&color=blue)](https://opentechevents.org/spec/)
-
-Replace `your-user/your-repo` in the three badge URLs above with your fork
-(and the Pages URL in the third one) once you've finished the setup below —
-until then they point at nothing and render broken, which is your reminder
-to come back and fix them.
+-->
 
 Fork this repository and get, with nothing but GitHub and GitHub Pages:
 
@@ -140,6 +140,11 @@ Add this to the `<head>` of your community's website (if you have one):
 Add your community to the adopters list in
 [opentechevents-spec](https://github.com/OpenTechEvents/opentechevents-spec) so
 directories and users can find your feed.
+
+### 9. Turn on the README badges (optional)
+
+Near the top of this file, uncomment the `Validate`/`Publish`/`OTE spec`
+badges and replace `your-user/your-repo` with your fork.
 
 ## Editing events
 

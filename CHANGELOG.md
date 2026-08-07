@@ -20,6 +20,15 @@ this file versions the template repo (dashboard, workflows, docs), the spec
 versions the data format. A template release never implies a schema bump, or
 the other way around.
 
+## [0.4.1] - 2026-08-07
+
+### Fixed
+- The three README badges added in 0.4.0 now ship commented out instead of
+  rendering broken by default: a broken badge is a fine nudge in your own
+  fork, but it also made both the template's own README and every freshly
+  forked one look broken before anyone had a chance to configure anything.
+  Setup step 9 tells you where to uncomment and edit them.
+
 ## [0.4.0] - 2026-08-07
 
 ### Added
