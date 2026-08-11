@@ -1,0 +1,32 @@
+{
+  "id": "https://combuilderses.github.io/events/2027-02-26-encuentro-mensual-de-community-builders",
+  "name": "Encuentro mensual de Community Builders",
+  "description": "Todos los meses organizamos dos encuentros online, abiertos a cualquier persona que forme parte de [Community Builders](https://combuilderses.github.io/), uno el último martes por la tarde y otro el último viernes por la mañana. El objetivo es mantener el contacto, dar la bienvenida a nuevas incorporaciones y comentar los temas del orden del día, que se publican previamente en Encuentros.\n\nSi no quieres perderte nada, puedes:\n\n1. 📅 Consultar y sincronizar [el calendario](https://combuilderses.github.io/#events)\n vía:\n  * [ICS](https://combuilderses.github.io/events/feed.ics) (instrucciones para importar calendario iCal/ics: [Google Calendar](https://support.google.com/calendar/answer/37118?hl=es) & [Outlook](https://www.youtube.com/watch?v=h3hnRSjzmoo))\n  * [RSS](https://combuilderses.github.io/events/feed.xml)\n  * O [suscribirte al OTE feed](https://reader.opentechevents.org/?subscribe=https://combuilderses.github.io/events/feed.json)\n2. 🤖 Suscribirte a los recordatorios a través del bot de Telegram: [@ComBuildersEsBot](https://web.telegram.org/k/#@ComBuildersEsBot). ([algo + de info sobre este bot aquí](https://github.com/ComBuildersES/punto-de-encuentro/issues/40#issuecomment-4162387610))",
+  "startDate": "2027-02-26T10:00",
+  "endDate": "2027-02-26T11:11",
+  "timezone": "Europe/Madrid",
+  "attendanceMode": "online",
+  "status": "scheduled",
+  "image": [
+    {
+      "url": "https://github.com/user-attachments/assets/0d72bc4f-8ec5-4525-beb7-e51ec51ed3be",
+      "alt": "Captura de varios encuentros online en Discord"
+    }
+  ],
+  "offers": [
+    {
+      "price": 0
+    }
+  ],
+  "eligibility": {
+    "type": "members-only",
+    "note": "Personas que forman parte de la comunidad",
+    "url": "https://combuilderses.github.io/#faq"
+  },
+  "partOf": {
+    "id": "https://combuilderses.github.io/events/series/encuentro-mensual-de-community-builders",
+    "name": "Encuentro mensual de Community Builders",
+    "url": "https://github.com/ComBuildersES/punto-de-encuentro/blob/main/CONTRIBUTING.md#encuentros-online-mensuales",
+    "type": "series"
+  }
+}
