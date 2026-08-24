@@ -62,8 +62,14 @@
     // Expose the detected repo for the central dashboard-checks.js script.
     window.OTE_REPO = repo;
     var base = "https://tools.opentechevents.org/";
+    // Pass the feed's absolute URL too: on a custom domain the github.io URL
+    // the tools would guess from the repo answers 301, and a redirect without
+    // Access-Control-Allow-Origin is blocked by CORS before the fetch lands.
+    var feedUrl = new URL("feed.json", location.href).href;
     ["editor", "publish"].forEach(function (t) {
-      document.getElementById(t).href = base + t + "?repo=" + encodeURIComponent(repo);
+      document.getElementById(t).href =
+        base + t + "?repo=" + encodeURIComponent(repo) +
+        "&feed=" + encodeURIComponent(feedUrl);
     });
   } else {
     el.textContent = "unknown";
